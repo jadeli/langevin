@@ -1,0 +1,3 @@
+build/
+include/thick.h
+src/thick.c
