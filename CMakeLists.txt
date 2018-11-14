@@ -20,8 +20,10 @@ endif()
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 set(LIBRARY_NAME "lib${PROJECT_NAME}")
+set(TEST_EXE "test_${PROJECT_NAME}")
+
 add_subdirectory(src)
-#add_subdirectory(test)
+add_subdirectory(test)
 
 #4.source directory
 #aux_source_directory(src DIR_SRCS)
