@@ -3,7 +3,7 @@
 # to both the main executable and the tests.
 add_library(${LIBRARY_NAME} STATIC
   random.cxx
-#  event.cxx
+  avatar.cxx
 )
 set_target_properties(${LIBRARY_NAME} PROPERTIES PREFIX "")
 

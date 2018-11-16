@@ -1,3 +1,6 @@
+// LANGEVIN: 
+// Copyright@2018 Yao, Li CCNU
+
 #include <cmath>
 #include <fstream>
 #include <iostream>

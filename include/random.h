@@ -1,14 +1,18 @@
 // LANGEVIN: 
-// Copyright@2018 Yao, Li
-// CCNU License
+// Copyright@2018 Yao, Li CCNU
 
 #include <gsl/gsl_rng.h>
 
 namespace langevin {
 
+enum class RandomType {
+    Default,
+    RANLXS0,
+};
+
 class Random {
 public:
-    explicit Random(bool isNew = false);
+    explicit Random(const enum RandomType type);
 
     // get a random number between [0, 1)
     double next();
@@ -16,6 +20,7 @@ public:
     // get a random number between (0, 1)
     double next_pos();
 
+    // you should call destroy() to free memory
     void destroy();
 
 private:

@@ -1,7 +1,10 @@
+// LANGEVIN: 
+// Copyright@2018 Yao, Li CCNU
+
 #include <iostream>
 #include <cstring>
 
-#include "../include/random.h"
+#include "../include/avatar.h"
 
 #ifndef LANGEVIN_VERSION
 #define LANGEVIN_VERSION "dev"
@@ -22,13 +25,8 @@ int main(int argc, char* argv[]) {
 
     print_version();
 
-    Random rand{};
-    std::cout << rand.next() << std::endl;
-    rand.destroy();
-
-    Random rand2{true};
-    std::cout << rand2.next() << std::endl;
-    rand2.destroy();
+    Avatar avatar;
+    avatar.run();
 
     return 0;
 }
