@@ -11,7 +11,7 @@ namespace {
 
 Avatar::Avatar()
     :rand(RandomType::RANLXS0) {
-}
+}                                                                                                                                                                                  
 
 Avatar::~Avatar() = default;
 

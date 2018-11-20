@@ -4,6 +4,9 @@
 add_library(${LIBRARY_NAME} STATIC
   random.cxx
   avatar.cxx
+  particle.cxx
+  sample.cxx
+  nucleus.cxx
 )
 set_target_properties(${LIBRARY_NAME} PROPERTIES PREFIX "")
 
