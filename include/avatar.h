@@ -1,7 +1,7 @@
 // LANGEVIN: 
 // Copyright@2018 Yao, Li CCNU
 
-#include "../include/random.h"
+#include "../include/sample.h"
 
 namespace langevin {
 
@@ -12,9 +12,6 @@ public:
     ~Avatar();
 
     void run();
-
-private:
-    Random rand;
 };
 
 }

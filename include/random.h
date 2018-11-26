@@ -14,13 +14,13 @@ class Random {
 public:
     explicit Random(const enum RandomType type);
 
-    // get a random number between [0, 1)
+    /// get a random number between [0, 1)
     double next();
 
-    // get a random number between (0, 1)
-    double next_pos();
+    /// get a random number between (0, 1)
+    double nextPos();
 
-    // you should call destroy() to free memory
+    /// you should call destroy() to free memory
     void destroy();
 
 private:

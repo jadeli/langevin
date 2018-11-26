@@ -7,6 +7,7 @@ add_library(${LIBRARY_NAME} STATIC
   particle.cxx
   sample.cxx
   nucleus.cxx
+  input.cxx
 )
 set_target_properties(${LIBRARY_NAME} PROPERTIES PREFIX "")
 

@@ -45,7 +45,7 @@ double Random::next() {
     return gsl_rng_uniform(rng);
 }
 
-double Random::next_pos() {
+double Random::nextPos() {
     return gsl_rng_uniform_pos(rng);
 }
 

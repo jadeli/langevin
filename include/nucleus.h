@@ -4,6 +4,7 @@
 #include <memory>
 #include <cstring>
 #include <boost/multi_array.hpp>
+#include "../include/util.h"
 
 namespace langevin {
 
@@ -11,8 +12,6 @@ class Nucleus;
 
 // Alias for a smart pointer to a Nucleus.
 using NucleusPtr = std::unique_ptr<Nucleus>;
-// Alias for a three-dimensional thickness grid.
-using Grid = boost::multi_array<double, 3>;
 
 constexpr int XT_NUM = 1501;
 constexpr int Z_NUM = 101;

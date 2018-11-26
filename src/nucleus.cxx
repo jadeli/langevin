@@ -43,7 +43,7 @@ constexpr double Z_MAX = 15;
 constexpr double Z_MIN = 0;
 
 
-struct WoodsSaxonParam {
+struct WoodsSaxonParams {
     double xt;
     double rho0;
     double radiusA;
@@ -51,11 +51,11 @@ struct WoodsSaxonParam {
 };
 
 double rho(double z, void * p) {
-    WoodsSaxonParam param = *(WoodsSaxonParam *)p;
+    WoodsSaxonParams params = *(WoodsSaxonParams *)p;
     // x transver
-    double xt = param.xt;
+    double xt = params.xt;
 
-    return param.rho0 / (std::exp((std::sqrt(xt * xt + z * z) - param.radiusA) / param.a) + 1);
+    return params.rho0 / (std::exp((std::sqrt(xt * xt + z * z) - params.radiusA) / params.a) + 1);
 }
 
 }
@@ -68,11 +68,11 @@ double WoodsSaxonNucleus::thick(double z0, double xt) {
 
     gsl_integration_workspace * w = gsl_integration_workspace_alloc(GSL_INTEGRATION_WORKSPACE_SIZE);
 
-    WoodsSaxonParam param = {xt, rho0(), radiusA(), a()};
+    WoodsSaxonParams params = {xt, rho0(), radiusA(), a()};
 
     gsl_function F;
     F.function = &rho;
-    F.params   = &param;
+    F.params   = &params;
  
     gsl_integration_qags(&F, min, max, 0, GSL_INTEGRATION_RELATIVE_PRECISION, GSL_INTEGRATION_WORKSPACE_SIZE, w, &result, &error);
     gsl_integration_workspace_free(w);

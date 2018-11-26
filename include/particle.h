@@ -8,7 +8,7 @@ namespace langevin {
 
 class Particle {
 public:
-    Particle() = default;
+    explicit Particle(double px, double py);
     
     double x() const;
     double y() const;
