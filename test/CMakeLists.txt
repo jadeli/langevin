@@ -3,6 +3,7 @@
 
 add_executable(${TEST_EXE} 
   test_random.cxx
+  test_nucleus.cxx
 )
 
 #set(SRC_EXE "../src/random.cxx")
